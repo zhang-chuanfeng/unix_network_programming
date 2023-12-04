@@ -1,0 +1,8 @@
+.vscode
+./lib/*.o
+Makefile
+Make.defines
+*.a
+*.log
+*.status
+config.h
