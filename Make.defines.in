@@ -9,10 +9,13 @@
 # System = @host@
 
 CC = @CC@
-CFLAGS = -I../lib @CFLAGS@
+CFLAGS = -I./lib @CFLAGS@
 LIBS = @LIBUNP@ @LIBS@
 LIBS_XTI = @LIBUNPXTI@ @LIBUNP@ @LIBS_XTI@
 RANLIB = @RANLIB@
+LDDIR=-L$(ROOT)/lib -L$(ROOT)
+LDLIBS=$(LDDIR) -lunp $(EXTRALIBS)
+LIBUNP=$(ROOT)/lib/libunp.a
 
 # Following is the main library, built from all the object files
 # in the lib/ and libfree/ directories.
@@ -38,4 +41,4 @@ LIBROUTE_OBJS = @LIBROUTE_OBJS@
 LIBXTI_OBJS = @LIBXTI_OBJS@
 
 CLEANFILES = core core.* *.core *.o temp.* *.out typescript* \
-		*.lc *.lh *.bsdi *.sparc *.uw
+		*.lc *.lh *.bsdi *.sparc *.uw *.a
