@@ -5,4 +5,4 @@ all:	${LIB_OBJS}
 		${RANLIB} ${LIBUNP_NAME}
 
 clean:
-		rm -f ${PROGS} ${CLEANFILES}
+		rm -f ${PROGS} ${CLEANFILES} ${LIBUNP_NAME}

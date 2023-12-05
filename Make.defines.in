@@ -13,9 +13,9 @@ CFLAGS = -I./lib @CFLAGS@
 LIBS = @LIBUNP@ @LIBS@
 LIBS_XTI = @LIBUNPXTI@ @LIBUNP@ @LIBS_XTI@
 RANLIB = @RANLIB@
-LDDIR=-L$(ROOT)/lib -L$(ROOT)
+LDDIR=-L$(ROOT)
 LDLIBS=$(LDDIR) -lunp $(EXTRALIBS)
-LIBUNP=$(ROOT)/lib/libunp.a
+LIBUNP=$(ROOT)/libunp.a
 
 # Following is the main library, built from all the object files
 # in the lib/ and libfree/ directories.
